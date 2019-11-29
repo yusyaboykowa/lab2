@@ -10,6 +10,7 @@ while True:
         symbol = str(input("enter a symbol: "))
         print(a.count(symbol))
     elif(choice == 2):
-        for word in sort(a):
-            print(word)
-
+        h = a.replace('%', '').replace('$', '').replace('@', '').replace('*', '').replace('.', '').replace('!','').replace('&', '').replace('#', '').replace(';', '').replace('(', '').replace(')', '')
+        words = a.split()
+        p = sorted(words)
+        print(" ".join(sorted(set(p), key=p.index)))
